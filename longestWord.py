@@ -2,7 +2,7 @@
 #11/13/17
 #longestWord.py - prints the longest word
 
-words = input("Enter some words: ").split()
+words = input("Enter some words, dood: ").split()
 
 
 l = 0
@@ -12,4 +12,4 @@ for w in words:
     if length > l:
         l = length
         word = w
-print("the longest word is",word)
+print("The longest word is", word)
