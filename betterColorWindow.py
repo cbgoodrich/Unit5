@@ -5,13 +5,13 @@
 from ggame import *
 from random import randint
 
-num = randint(0,3)
-
 colorList = [0xFF0000, 0x00FF00, 0x0000FF]
 
 def mouseClick(event):
     
-    color = Color(num, 1)
+    num = randint(0,3)
+    
+    color = Color(colorList[num], 1)
     
     rect = RectangleAsset(1000, 1000, LineStyle(1, color), color)
     Sprite(rect)
