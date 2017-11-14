@@ -5,7 +5,7 @@
 from ggame import *
 from random import randint
 
-colorList = [0xFF0000, 0x00FF00, 0x0000FF]
+colorList = ["0xFF0000", "0x00FF00", "0x0000FF"]
 
 def mouseClick(event):
     
