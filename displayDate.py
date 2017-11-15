@@ -5,12 +5,13 @@
 from datetime import date
 from calendar import weekday
 
-day = date.today().day
-month = date.today().month
-year = date.today().year
+dayNow = date.today().day
+monthNow = date.today().month
+yearNow = date.today().year
 
 days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
 months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
 
+dayOfWeek = weekday(yearNow, monthNow, dayNow)
 
-print(weekday(year, month, day))
+print("Today is", days[dayOfWeek]+",", months[monthNow-1], dayNow, yearNow)
