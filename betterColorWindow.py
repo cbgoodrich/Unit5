@@ -9,7 +9,7 @@ colorList = ["0xFF0000", "0x00FF00", "0x0000FF"]
 
 def mouseClick(event):
     
-    num = randint(0,3)
+    num = randint(0,2)
     
     color = Color(colorList[num], 1)
     
