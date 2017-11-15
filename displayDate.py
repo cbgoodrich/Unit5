@@ -2,8 +2,15 @@
 #11/15/17
 #displayDate.py - displays today's date
 
+from datetime import date
 from calendar import weekday
 
-days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+day = date.today().day
+month = date.today().month
+year = date.today().year
 
-print(date.today().month)
+days = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"]
+months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+
+
+print(weekday(year, month, day))
