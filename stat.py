@@ -6,7 +6,10 @@ print("Type a list of numbers")
 print("Enter 'q' when finished")
 numbers = []
 while True:
-    num = float(input("> "))
-    numbers.append(num)
-    
+    num = input("> ")
+    if num == "q":
+        break
+    else:
+        numbers.append(float(num))
+
     
