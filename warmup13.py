@@ -5,10 +5,10 @@
 from random import randint
 
 numbers = []
-i = 2
+i = 1
 
-while i <= 21:
-    num = randint(1, i)
+while i <= 20:
+    num = randint(1, 25)
     numbers.append(num)
     i += 1
     
