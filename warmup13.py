@@ -12,4 +12,7 @@ while i <= 21:
     numbers.append(num)
     i += 1
     
-print(numbers[5])
+numbers.sort()
+print("The min is", numbers[0])
+print("The max is", numbers[-1])
+print("The sum is", sum(numbers))
