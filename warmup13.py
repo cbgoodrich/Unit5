@@ -13,6 +13,7 @@ while i <= 20:
     i += 1
     
 numbers.sort()
+
 print("The min is", numbers[0])
 print("The max is", numbers[-1])
 print("The sum is", sum(numbers))
