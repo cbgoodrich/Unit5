@@ -11,5 +11,12 @@ while True:
         break
     else:
         numbers.append(float(num))
+        
+numbers.sort()
+
+print("Min:", numbers[0])
+print("Max:", numbers[-1])
+print("Mean:", sum(numbers)/len(numbers))
+
 
     
