@@ -4,7 +4,10 @@
 
 board = [["a", "b", "c"],["d", "e", "f"],["g", "h", "i"]]
 
-for row in range(0,3):
-    for column in range(0,3):
-        print(board[row][column], end = " ")
-    print()
+def printBoard():
+    for row in range(0,3):
+        for column in range(0,3):
+            print(board[row][column], end = " ")
+        print()
+
+printBoard()
