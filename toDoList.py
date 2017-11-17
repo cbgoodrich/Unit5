@@ -3,16 +3,24 @@
 #toDoList.py - makes a to do list that you can add stuff to
 
 toDoList = []
-validCommands = "add, delete, print, quit"
-print("Valid commands are:", validCommands)
+print("Valid commands: add, delete, print, quit")
 
 while True:
     toDo = input("> ")
-    if toDo[0:2] == "add":
-        toDoList.append(toDo[4:])
-    elif toDo == "done":
+    if "quit" in toDo:
         break
-    
-print(toDoList[:])
+    elif "print" in toDo:
+        for w in toDoList:
+            print(w)
+    elif toDo[:4] == "add ":
+        toDoList.append(toDo[4:])
+    elif toDo[:7] == "delete ":
+        if toDo[7:] in toDoList:
+            toDoList.remove(toDo[7:])
+        else:
+            print(toDo[7:], "not in list")
+    else:
+        print("Invalid Command")
+        
     
     
