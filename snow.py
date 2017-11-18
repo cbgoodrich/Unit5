@@ -22,6 +22,8 @@ def step():
 
 if __name__ == "__main__":
     
+    snowList = []
+    
     data = {}
     data["frames"] = 0
     
@@ -32,7 +34,16 @@ if __name__ == "__main__":
     sky = RectangleAsset(WINDOW_X, WINDOW_Y, LineStyle(1, blue), blue)
     
     Sprite(sky)
-    snow = Sprite(whiteBox, (500, 200))
+    i = 0
+    while True:
+        snow = Sprite(whiteBox, (i, 0))
+        snowList.append(snow.y)
+        i += CELL_SIZE
+        if i >= 1000:
+            break
+        
+    
+    
     
     App().run(step)
     
