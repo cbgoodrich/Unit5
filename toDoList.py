@@ -21,6 +21,4 @@ while True:
             print(toDo[7:], "not in list")
     else:
         print("Invalid Command")
-        
-    
-    
+
