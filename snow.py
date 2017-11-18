@@ -6,7 +6,7 @@ from ggame import *
 
 #CONSTANTS
 WINDOW_X = 1000
-WINDOW_Y = 525
+WINDOW_Y = 520
 CELL_SIZE = 10
 
 def moveSnow():
