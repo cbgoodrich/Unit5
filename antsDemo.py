@@ -15,6 +15,7 @@ if __name__ == "__main__":
     
     ant = CircleAsset(10,LineStyle(1,red),red)
     
-    Sprite(ant,(randint(1,WIDTH), randint(1,HEIGHT)))
+    for i in range(10):
+        Sprite(ant,(randint(1,WIDTH), randint(1,HEIGHT)))
     
     App().run()
