@@ -13,15 +13,13 @@ CELL_SIZE = 10
 def spawnSnow():
     data["snowList"].append(Sprite(snow,(randint(0, WINDOW_X))))
 
-def moveSnow():
-    for snow in data["snowList"]:
-        flake.y += 5
-
 def step():
     data["frames"] += 1
     if data["frames"] == 5:
         spawnSnow()
-        moveSnow()
+    for flake in data["snowList"]:
+        if flake.y <= WINDOW_X:
+            flake.y += 5
 
 if __name__ == "__main__":
     
