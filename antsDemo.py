@@ -9,13 +9,23 @@ from random import randint
 WIDTH = 1000
 HEIGHT = 500
 
+def step():
+    for ant in data["antList"]:
+        dx = randint(-4,3)
+        dy = randint(-4,3)
+        ant.x += dx
+        ant.y += dy
+
 if __name__ == "__main__":
     
     red = Color(0xFF0000, 1)
-    
     ant = CircleAsset(10,LineStyle(1,red),red)
     
-    for i in range(10):
-        Sprite(ant,(randint(1,WIDTH), randint(1,HEIGHT)))
+    data = {}
+    data["antList"] = []
     
-    App().run()
+    
+    for i in range(10):
+        data["antList"].append(Sprite(ant,(randint(1,WIDTH), randint(1,HEIGHT))))
+    
+    App().run(step)
