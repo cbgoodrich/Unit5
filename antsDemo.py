@@ -3,7 +3,11 @@
 #antsDemo.py - how to use lists with graphics
 
 from ggame import *
+from random import randint
 
+#CONSTANTS
+WIDTH = 1000
+HEIGHT = 500
 
 if __name__ == "__main__":
     
@@ -11,6 +15,6 @@ if __name__ == "__main__":
     
     ant = CircleAsset(10,LineStyle(1,red),red)
     
-    Sprite(ant,(50,50))
+    Sprite(ant,(randint(1,WIDTH), randint(1,HEIGHT)))
     
     App().run()
