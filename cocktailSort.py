@@ -1,15 +1,22 @@
 #Charlie Goodrich
 #11/27/17
-#cocktailSort.py - code to test a sorting function
+#cocktailSort.py - implementation of cocktail sort
 
 from random import randint
 from time import time
 
 N = 100 #how many numbers will be sorted
 
-def mySort(L):
-    #put your code here
-    return L
+def mySort(A):
+    swapped = True
+    while swapped:
+        swapped = False
+        for i in range(0, len(A)-1):
+            if A[i] > A[i+1]:
+                A[i], A[i+1] = A[i+1], A[i] #swapping the numbers
+                swapped = True
+        
+    return A
 
 if __name__ == '__main__':
     
