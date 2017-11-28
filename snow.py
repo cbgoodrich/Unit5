@@ -11,7 +11,12 @@ WINDOW_Y = 520
 CELL_SIZE = 10
 
 def spawnSnow():
-    data["snowList"].append(Sprite(snow,(randint(0, WINDOW_X))))
+    xPos = randint(0, WINDOW_X-CELL_SIZE)
+    data["snowList"].append(Sprite(snow, (CELL_SIZE*xPos, 0)))
+    data["fallPosition"][xPos] += 1
+    data["stopFlake"].append(data["fallPosition"][xPos])
+    print(data["stopFlake"])
+
 
 def step():
     data["frames"] += 1
@@ -23,10 +28,19 @@ def step():
 
 if __name__ == "__main__":
     
+    COLS = WINDOW_X/CELL_SIZE
+    
     snowList = []
     
     data = {}
+    data["frames"] = 0
     data["snowList"] = []
+    data["fallPosition"] = []
+    data["stopFlake"] = []
+    
+    for i in range(0, COLS):
+        data["fallPosition"].append(0)
+        
     
     
     white = Color(0xFFFFFF, 1)
