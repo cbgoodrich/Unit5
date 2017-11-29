@@ -15,6 +15,7 @@ def gnomeSort(A):
         else:
             A[pos], A[pos-1] = A[pos-1], A[pos] #swapping the numbers
             pos -= 1
+    return A
 
 if __name__ == '__main__':
     
