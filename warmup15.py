@@ -10,6 +10,6 @@ def doubled(A):
         B.append(num*2)
     return B
     
-print(doubled([2,4,6]))
+print(doubled([2,4,6,8,10]))
     
 
