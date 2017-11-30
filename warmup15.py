@@ -4,12 +4,17 @@
 
 A = []
 
-def doubled(A):
+def doubled():
+    while True:
+        num = input("Enter a number of stop: ")
+        if num == "stop":
+            break
+        else:
+            A.append(int(num))
     B = []
     for num in A:
         B.append(num*2)
     return B
     
-print(doubled([2,4,6,8,10]))
-    
+print(doubled())
 
