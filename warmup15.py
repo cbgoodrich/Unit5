@@ -6,7 +6,7 @@ A = []
 
 def doubled():
     while True:
-        num = input("Enter a number of stop: ")
+        num = input("Enter a number or stop to end the program: ")
         if num == "stop":
             break
         else:
