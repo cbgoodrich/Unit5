@@ -14,7 +14,8 @@ def doubled():
     B = []
     for num in A:
         B.append(num*2)
-    return B
+    print(A)
+    print(B)
     
-print(doubled())
+doubled()
 
