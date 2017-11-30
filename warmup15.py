@@ -5,16 +5,11 @@
 A = []
 
 def doubled(A):
-    while True:
-        num = input("Enter a number, or enter stop to stop: ")
-        if num == "stop":
-            break
-        else:
-            A.append(int(num))
-    
+    B = []
     for num in A:
-        num *= 2
-        
-    return A
+        B.append(num*2)
+    return B
     
-print(doubled[2,4,6])
+print(doubled([2,4,6]))
+    
+
