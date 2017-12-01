@@ -22,9 +22,14 @@ def step():
     data["frames"] += 1
     if data["frames"] == 5:
         spawnSnow()
+        data["frames"] = 0
+    spot = 0
     for flake in data["snowList"]:
-        if flake.y <= WINDOW_X:
-            flake.y += 5
+        flake.y += 1
+        if flake.y == (WINDOW_X - CELL_SIZE*(data["stopFlake"][spot])):
+            data["snowList"].remove(flake)
+            data["stopFlake"].remove(data["stopFlake"][spot])
+        place += 1
 
 if __name__ == "__main__":
     
