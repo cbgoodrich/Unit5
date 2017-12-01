@@ -6,14 +6,15 @@ A = []
 
 def doubled():
     while True:
-        num = input("Enter a number or stop to end the program: ")
+        num = input("Enter a number or 'stop' to end the program: ")
         if num == "stop":
             break
         else:
-            A.append(int(num))
+            A.append(float(num))
     B = []
     for num in A:
         B.append(num*2)
+    
     print(A)
     print(B)
     
