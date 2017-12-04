@@ -5,7 +5,7 @@
 from random import randint
 
 def rand5():
-    L = []
+    L = [] #creating the list to put the random #'s in
     i = 1
     while i <= 5:
         L.append(randint(1,100))
