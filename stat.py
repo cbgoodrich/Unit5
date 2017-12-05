@@ -2,11 +2,11 @@
 #11/15/17
 #stat.py - does statistical analysis of inputted numbers
 
-print("Type a list of numbers")
+print("Enter a list of numbers")
 print("Enter 'q' when finished")
 numbers = []
 while True:
-    num = input("> ")
+    num = input(">>>")
     if num == "q":
         break
     else:
@@ -31,5 +31,3 @@ print("Max:", numbers[-1])
 print("Mean:", sum(numbers)/len(numbers))
 print("Mode:", mode)
 
-
-    
